@@ -1,0 +1,16 @@
+{
+  "name": "08-openpgp-serve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "node generateKey.js",
+    "encrypt-decrypt": "node encrypt-decrypt.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "openpgp": "^5.0.0-3"
+  }
+}
