@@ -8,9 +8,9 @@ const fs = require('fs/promises');
     const passphrase = 'super long and hard to guess secret';
 
     const publicKey = await openpgp.readKey({ armoredKey: publicKeyArmored });
-
+    const privKey = await openpgp.readKeys({ armoredKeys: privateKeyArmored })
     const privateKey = await openpgp.decryptKey({
-      privateKey: await openpgp.readKeys({ armoredKeys: privateKeyArmored }),
+      privateKey: privKey[0],
       passphrase,
     });
 
