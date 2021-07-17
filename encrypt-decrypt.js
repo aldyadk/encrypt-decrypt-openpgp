@@ -1,8 +1,7 @@
-const openpgp = require('openpgp'); // use as CommonJS, AMD, ES6 module or via window.openpgp
+const openpgp = require('openpgp');
 const fs = require('fs/promises');
 
 (async () => {
-  // put keys in backtick (``) to avoid errors caused by spaces or tabs
   const publicKeyArmored = await fs.readFile('./public.asc', {encoding: 'utf-8'});
   const privateKeyArmored = await fs.readFile('./private.asc', {encoding: 'utf-8'});
   const passphrase = 'super long and hard to guess secret';

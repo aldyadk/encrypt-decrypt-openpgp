@@ -1,4 +1,5 @@
 # Clone this repository
+## make sure you have nodejs & npm installed on your machine 
 
 ## Install openpgpjs dependency
 `npm install`
